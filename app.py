@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on sun Oct 25 22:48:37 2020
-
-@author: Suhas
-"""
-
 from flask import Flask, render_template, url_for, request
 from tensorflow.keras.models import load_model
 
