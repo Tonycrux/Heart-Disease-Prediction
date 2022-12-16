@@ -9,7 +9,7 @@
 
     </head>
       <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
-    <body style="background-image:url(https://images.unsplash.com/photo-1623134915831-9dcb66cf9a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
+    <body style="background-image:url(https://images.unsplash.com/photo-1544911845-1f34a3eb46b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
                    background-repeat: no-repeat;
                     background-attachment: fixed;
                   background-size: cover;">
@@ -27,84 +27,85 @@
     	<div class="ml-container">
 
     		<form action="{{ url_for('predict') }}" method="POST">
-
+        
+        <label class="form-control" for = "age"> Age: </label>
         <input class="form-input" type="text" name="age" placeholder="Enter your age"><br>
-
+        <label class="form-control" for = "sex"> Sex: </label>
       <select id="sex" name="sex" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=1>Sex</option>
+               
                <option value=1>Male</option>
                  <option value=0>Female</option>
           </select><br>
 
 
-
+          <label class="form-control" for = "cp"> Chest Pain Type: </label>
           <select id="cp" name="cp" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=1>Chest pain type</option>
+               
                <option value=0>typical angina</option>
                <option value=0>atypical angina</option>
                <option value=0>asymptomatic</option>
           </select><br>
 
-
+          <label class="form-control" for = "trestbps"> Resting blood pressure: </label>
               <input class="form-input" type="text" name="trestbps" placeholder="Resting blood pressure (in mm Hg )"><br>
-
+              <label class="form-control" for = "chol"> Serum Cholestoral: </label>
                 <input class="form-input" type="text" name="chol" placeholder="Serum Cholestoral in mg/dl eg 220"><br>
 
 
-
+          <label class="form-control" for = "fbs"> Fasting blood sugar > 120 mg/dl: </label>
           <select id="fbs" name="fbs" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=1>Fasting blood sugar > 120 mg/dl</option>
+               
                <option value=1>True</option>
                  <option value=0>False</option>
           </select><br>
 
 
 
-
+          <label class="form-control" for = "restecg"> Resting electrocardiographic results: </label>
           <select id="restecg" name="restecg" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=1> Resting electrocardiographic results</option>
+               
                <option value=0>Normal</option>
                 <option value=1> Having ST-T wave abnormality</option>
                 <option value=2> Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
           </select><br>
-
+          <label class="form-control" for = "thalach"> Maximum heart rate achieved: </label>
                 <input class="form-input" type="text" name="thalach" placeholder="Maximum heart rate achieved eg. 170 "><br>
 
 
-
+<label class="form-control" for = "exang"> Exercise induced angina: </label>
                 <select id="exang" name="exang" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=1>Exercise induced angina </option>
+               
                <option value=1>Yes</option>
                  <option value=0>No</option>
           </select><br>
 
 
-
+<label class="form-control" for = "oldpeak"> Oldpeak: </label>
            <input class="form-input" type="text" name="oldpeak" placeholder="Depression induced by exercise relative to rest eg.1-5"><br>
 
 
 
-
+<label class="form-control" for = "slope"> Slope: </label>
            <select id="slope" name="slope" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=0>The slope of the peak exercise ST segment </option>
+               
                <option value=0>Upsloping</option>
                <option value=1>Flat</option>
                <option value=2>Downsloping</option>
@@ -114,24 +115,24 @@
 
 
 
-
+<label class="form-control" for = "ca"> Number of major vessels: </label>
           <select id="ca" name="ca" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=1>Number of major vessels (0-3) colored by flourosopy</option>
+               
                <option value=0>0</option>
                  <option value=1>1</option>
                  <option value=2>2</option>
                   <option value=3>3</option>
           </select><br>
 
-
+<label class="form-control" for = "thal"> Thalassemia: </label>
            <select id="thal" name="thal" style="text-align: center;
 	                                        width: 358px;
 	                                        height: 30px;
 	                                        margin-bottom: 5px;">
-               <option value=0>Thalassemia</option>
+               
                <option value=0>Normal</option>
                  <option value=1>Fixed defect</option>
                  <option value=2>Reversable defect</option>
@@ -143,7 +144,7 @@
           <input type="submit" class="my-cta-button" value="Predict">
         	</form>
     	</div>
-
+     
 
         <!-- Footer -->
        <div class='footer'><hr>
