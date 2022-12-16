@@ -1,7 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on sun Oct 25 22:48:37 2020
+
+@author: Suhas
+"""
+
 from flask import Flask, render_template, url_for, request
 from tensorflow.keras.models import load_model
 
 
+import datetime
 import numpy as np
 
 
@@ -39,7 +47,7 @@ def predict():
         data = np.array([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
         my_prediction = model.predict(data)
 
-        return render_template('result.html', prediction=my_prediction)
+        return render_template('result2.html', prediction=my_prediction, utc_dt=datetime.datetime.utcnow())
 
 
 if __name__ == '__main__':
